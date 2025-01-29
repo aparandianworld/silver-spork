@@ -14,10 +14,10 @@ def display_video(video_capture):
             break
         
         cv2.imshow("Video", frame)
-        if cv2.waitKey(delay) & 0xFF == 27:
+        if cv2.waitKey(delay) & 0xFF == 27: # 0xFF is the Esc key
             print("Esc key is pressed by user...")
             break
-    
+    # release the video capture object and close all windows
     video_capture.release()
     cv2.destroyAllWindows()
 
